@@ -177,43 +177,6 @@ class ColorProcessor:
         self._ocio_config_name: str = "config.ocio"
         self._dest_path: str = None
         
-
-    # @property
-    # def operators(self) -> None:
-    #     return self.operators
-    # 
-    # @operators.setter
-    # def operators(self, *args) -> None:
-    #     self.set_operators(*args)
-    # 
-    # @operators.deleter
-    # def operators(self) -> None:
-    #     self.clear_operators()
-    #
-    # @property
-    # def views(self) -> list:
-    #     return self._views
-    # 
-    # @views.setter
-    # def views(self, *args: str | list[str]) -> None:
-    #     self.set_views(*args)
-    # 
-    # @views.deleter
-    # def views(self) -> None:
-    #     self.clear_views()
-    #
-    # @property
-    # def vars(self) -> list:
-    #     return self._vars
-    # 
-    # @vars.setter
-    # def vars(self, var_dict: dict) -> None:
-    #     self.set_vars(**var_dict)
-    # 
-    # @vars.deleter
-    # def vars(self) -> None:
-    #     self.clear_vars()
-
     def set_ocio_config_name(self, name: str) -> None:
         self._ocio_config_name = name
 
