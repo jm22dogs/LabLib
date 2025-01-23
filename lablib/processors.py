@@ -154,7 +154,8 @@ class ColorProcessor:
     staging_dir: str = None
     context: str = "LabLib"
     family: str = "LabLib"
-    working_space: str = "ACES - ACEScg"
+    working_space: str = "ACES - ACES2065-1"
+    process_space: str = "ACES - ACEScg"
     views: list[str] = field(default_factory = lambda: list([]))
 
     def __post_init__(self) -> None:
@@ -339,7 +340,7 @@ class ColorProcessor:
         )
         look = OCIO.Look(
             name = self.context,
-            processSpace = self.working_space,
+            processSpace = self.process_space,
             transform = look_transform
         )
         self._ocio_config.addColorSpace(cspace)
